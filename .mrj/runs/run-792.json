@@ -1,0 +1,151 @@
+{
+  "version": 1,
+  "run": {
+    "started_at": "2026-06-02T04:31:23.578136009Z",
+    "finished_at": "2026-06-02T04:31:25.068625711Z",
+    "took_ms": 1490,
+    "mode": "execute",
+    "config": {
+      "base_branch": "main",
+      "merge_if_blocked": false,
+      "merge_if_checks_skipped": true,
+      "merge_type": "squash",
+      "sort_by": "created",
+      "sort_direction": "asc",
+      "flags": {
+        "show_repos_with_no_prs": false,
+        "show_prs_from_untrusted_authors": false,
+        "show_prs_with_unmatched_head": false,
+        "skip_disqualifications_in_summary": false
+      }
+    },
+    "summary": {
+      "num_disqualifications": 2,
+      "num_errors": 0,
+      "num_merged": 0
+    },
+    "repos": [
+      {
+        "repo": "dhth/bmm",
+        "owner": "dhth",
+        "name": "bmm",
+        "status": "finished",
+        "prs": [
+          {
+            "number": 135,
+            "title": "build: bump sqlx from 0.8.6 to 0.9.0",
+            "url": "https://github.com/dhth/bmm/pull/135",
+            "created_at": "2026-05-29T19:55:21Z",
+            "updated_at": "2026-05-29T19:55:22Z",
+            "status": "disqualified",
+            "qualifications": [
+              {
+                "kind": "author",
+                "value": "dependabot[bot]"
+              },
+              {
+                "kind": "check",
+                "name": "announce",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "publish-homebrew-formula",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "custom-publish-crates",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "host",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "build-global-artifacts",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "build-local-artifacts (${{ join(matrix.targets, ', ') }})",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "lint-yaml",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "lint-workflows",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "dstlled-diff",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "lint-sh",
+                "conclusion": "success"
+              }
+            ],
+            "disqualification": {
+              "kind": "check",
+              "name": "build (ubuntu-latest)",
+              "conclusion": "failure"
+            },
+            "merged": false
+          }
+        ]
+      },
+      {
+        "repo": "dhth/crumbs",
+        "owner": "dhth",
+        "name": "crumbs",
+        "status": "finished",
+        "prs": [
+          {
+            "number": 12,
+            "title": "build: bump sqlx from 0.8.6 to 0.9.0",
+            "url": "https://github.com/dhth/crumbs/pull/12",
+            "created_at": "2026-06-01T02:31:11Z",
+            "updated_at": "2026-06-01T04:35:01Z",
+            "status": "disqualified",
+            "qualifications": [
+              {
+                "kind": "author",
+                "value": "dependabot[bot]"
+              },
+              {
+                "kind": "check",
+                "name": "lint-workflows",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "lint-yaml",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "build (macos-latest)",
+                "conclusion": "success"
+              }
+            ],
+            "disqualification": {
+              "kind": "check",
+              "name": "test (ubuntu-latest)",
+              "conclusion": "failure"
+            },
+            "merged": false
+          }
+        ]
+      }
+    ]
+  }
+}
