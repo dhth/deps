@@ -3,7 +3,8 @@ updates:
   - package-ecosystem: github-actions
     directory: "/"
     schedule:
-      interval: "monthly"
+      interval: "cron"
+      cronjob: "0 5 9,23 * *"
     labels:
       - "dependencies"
     commit-message:
