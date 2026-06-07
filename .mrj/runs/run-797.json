@@ -1,0 +1,1009 @@
+{
+  "version": 1,
+  "run": {
+    "started_at": "2026-06-07T04:31:30.016931077Z",
+    "finished_at": "2026-06-07T04:31:36.869790743Z",
+    "took_ms": 6852,
+    "mode": "execute",
+    "config": {
+      "base_branch": "main",
+      "merge_if_blocked": false,
+      "merge_if_checks_skipped": true,
+      "merge_type": "squash",
+      "sort_by": "created",
+      "sort_direction": "asc",
+      "flags": {
+        "show_repos_with_no_prs": false,
+        "show_prs_from_untrusted_authors": false,
+        "show_prs_with_unmatched_head": false,
+        "skip_disqualifications_in_summary": false
+      }
+    },
+    "summary": {
+      "num_disqualifications": 2,
+      "num_errors": 0,
+      "num_merged": 8
+    },
+    "repos": [
+      {
+        "repo": "dhth/crumbs",
+        "owner": "dhth",
+        "name": "crumbs",
+        "status": "finished",
+        "prs": [
+          {
+            "number": 12,
+            "title": "build: bump sqlx from 0.8.6 to 0.9.0",
+            "url": "https://github.com/dhth/crumbs/pull/12",
+            "created_at": "2026-06-01T02:31:11Z",
+            "updated_at": "2026-06-06T04:27:31Z",
+            "status": "disqualified",
+            "qualifications": [
+              {
+                "kind": "author",
+                "value": "dependabot[bot]"
+              },
+              {
+                "kind": "check",
+                "name": "lint-yaml",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "lint-workflows",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "lint",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "build (ubuntu-latest)",
+                "conclusion": "success"
+              }
+            ],
+            "disqualification": {
+              "kind": "check",
+              "name": "test (ubuntu-latest)",
+              "conclusion": "failure"
+            },
+            "merged": false
+          }
+        ]
+      },
+      {
+        "repo": "dhth/tash",
+        "owner": "dhth",
+        "name": "tash",
+        "status": "finished",
+        "prs": [
+          {
+            "number": 93,
+            "title": "ci: bump taiki-e/install-action from 2.79.14 to 2.80.0",
+            "url": "https://github.com/dhth/tash/pull/93",
+            "created_at": "2026-06-06T05:02:59Z",
+            "updated_at": "2026-06-06T05:02:59Z",
+            "status": "qualified",
+            "qualifications": [
+              {
+                "kind": "author",
+                "value": "dependabot[bot]"
+              },
+              {
+                "kind": "check",
+                "name": "announce",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "publish-homebrew-formula",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "custom-publish-crates",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "host",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "build-global-artifacts",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "build-local-artifacts (${{ join(matrix.targets, ', ') }})",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "test (macos-latest)",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "build (ubuntu-latest)",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "test (ubuntu-latest)",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "build (macos-latest)",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "lint-yaml",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "publish-check",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "audit",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "lint-workflows",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "lint",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "plan",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "changes",
+                "conclusion": "success"
+              },
+              {
+                "kind": "state",
+                "value": "clean"
+              }
+            ],
+            "merged": true
+          }
+        ]
+      },
+      {
+        "repo": "dhth/squish",
+        "owner": "dhth",
+        "name": "squish",
+        "status": "finished",
+        "prs": [
+          {
+            "number": 89,
+            "title": "ci: bump taiki-e/install-action from 2.79.14 to 2.80.0",
+            "url": "https://github.com/dhth/squish/pull/89",
+            "created_at": "2026-06-06T05:02:57Z",
+            "updated_at": "2026-06-06T05:02:57Z",
+            "status": "qualified",
+            "qualifications": [
+              {
+                "kind": "author",
+                "value": "dependabot[bot]"
+              },
+              {
+                "kind": "check",
+                "name": "lint",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "test (macos-latest)",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "test (ubuntu-latest)",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "audit",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "lint-workflows",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "build (macos-latest)",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "lint-yaml",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "build (ubuntu-latest)",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "changes",
+                "conclusion": "success"
+              },
+              {
+                "kind": "state",
+                "value": "clean"
+              }
+            ],
+            "merged": true
+          }
+        ]
+      },
+      {
+        "repo": "dhth/tbll",
+        "owner": "dhth",
+        "name": "tbll",
+        "status": "finished",
+        "prs": [
+          {
+            "number": 100,
+            "title": "ci: bump taiki-e/install-action from 2.79.14 to 2.80.0",
+            "url": "https://github.com/dhth/tbll/pull/100",
+            "created_at": "2026-06-06T05:02:57Z",
+            "updated_at": "2026-06-06T05:02:58Z",
+            "status": "qualified",
+            "qualifications": [
+              {
+                "kind": "author",
+                "value": "dependabot[bot]"
+              },
+              {
+                "kind": "check",
+                "name": "custom-release-packages",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "publish-homebrew-formula",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "announce",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "build-global-artifacts",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "host",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "build-local-artifacts (${{ join(matrix.targets, ', ') }})",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "test (ubuntu-latest)",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "build (macos-latest)",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "test (macos-latest)",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "lint-yaml",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "build (ubuntu-latest)",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "lint",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "audit",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "lint-workflows",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "plan",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "changes",
+                "conclusion": "success"
+              },
+              {
+                "kind": "state",
+                "value": "clean"
+              }
+            ],
+            "merged": true
+          }
+        ]
+      },
+      {
+        "repo": "dhth/ting",
+        "owner": "dhth",
+        "name": "ting",
+        "status": "finished",
+        "prs": [
+          {
+            "number": 80,
+            "title": "ci: bump taiki-e/install-action from 2.79.14 to 2.80.0",
+            "url": "https://github.com/dhth/ting/pull/80",
+            "created_at": "2026-06-06T05:03:02Z",
+            "updated_at": "2026-06-06T05:03:45Z",
+            "status": "qualified",
+            "qualifications": [
+              {
+                "kind": "author",
+                "value": "dependabot[bot]"
+              },
+              {
+                "kind": "check",
+                "name": "announce",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "custom-publish-crates",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "publish-homebrew-formula",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "host",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "build-local-artifacts (${{ join(matrix.targets, ', ') }})",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "build-global-artifacts",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "audit",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "build (ubuntu-latest)",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "lint-yaml",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "test (macos-latest)",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "lint",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "dstlled-diff",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "build (macos-latest)",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "publish-check",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "test (ubuntu-latest)",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "lint-workflows",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "plan",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "changes",
+                "conclusion": "success"
+              },
+              {
+                "kind": "state",
+                "value": "clean"
+              }
+            ],
+            "merged": true
+          }
+        ]
+      },
+      {
+        "repo": "dhth/tomo",
+        "owner": "dhth",
+        "name": "tomo",
+        "status": "finished",
+        "prs": [
+          {
+            "number": 110,
+            "title": "ci: bump taiki-e/install-action from 2.79.14 to 2.80.0",
+            "url": "https://github.com/dhth/tomo/pull/110",
+            "created_at": "2026-06-06T05:02:57Z",
+            "updated_at": "2026-06-06T05:02:58Z",
+            "status": "qualified",
+            "qualifications": [
+              {
+                "kind": "author",
+                "value": "dependabot[bot]"
+              },
+              {
+                "kind": "check",
+                "name": "custom-release-packages",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "announce",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "publish-homebrew-formula",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "host",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "build-global-artifacts",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "build-local-artifacts (${{ join(matrix.targets, ', ') }})",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "dstlled-diff",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "test (ubuntu-latest)",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "lint-yaml",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "build (ubuntu-latest)",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "test (macos-latest)",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "lint",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "build (macos-latest)",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "release-check",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "audit",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "lint-workflows",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "changes",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "plan",
+                "conclusion": "success"
+              },
+              {
+                "kind": "state",
+                "value": "clean"
+              }
+            ],
+            "merged": true
+          }
+        ]
+      },
+      {
+        "repo": "dhth/bmm",
+        "owner": "dhth",
+        "name": "bmm",
+        "status": "finished",
+        "prs": [
+          {
+            "number": 135,
+            "title": "build: bump sqlx from 0.8.6 to 0.9.0",
+            "url": "https://github.com/dhth/bmm/pull/135",
+            "created_at": "2026-05-29T19:55:21Z",
+            "updated_at": "2026-05-29T19:55:22Z",
+            "status": "disqualified",
+            "qualifications": [
+              {
+                "kind": "author",
+                "value": "dependabot[bot]"
+              },
+              {
+                "kind": "check",
+                "name": "announce",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "publish-homebrew-formula",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "custom-publish-crates",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "host",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "build-global-artifacts",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "build-local-artifacts (${{ join(matrix.targets, ', ') }})",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "lint-yaml",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "lint-workflows",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "dstlled-diff",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "lint-sh",
+                "conclusion": "success"
+              }
+            ],
+            "disqualification": {
+              "kind": "check",
+              "name": "build (ubuntu-latest)",
+              "conclusion": "failure"
+            },
+            "merged": false
+          },
+          {
+            "number": 141,
+            "title": "ci: bump taiki-e/install-action from 2.79.6 to 2.79.14",
+            "url": "https://github.com/dhth/bmm/pull/141",
+            "created_at": "2026-06-05T21:34:49Z",
+            "updated_at": "2026-06-05T21:34:49Z",
+            "status": "qualified",
+            "qualifications": [
+              {
+                "kind": "author",
+                "value": "dependabot[bot]"
+              },
+              {
+                "kind": "check",
+                "name": "announce",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "custom-publish-crates",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "publish-homebrew-formula",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "host",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "build-global-artifacts",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "build-local-artifacts (${{ join(matrix.targets, ', ') }})",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "dstlled-diff",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "audit",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "lint-yaml",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "build (ubuntu-latest)",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "test (ubuntu-latest)",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "build (macos-latest)",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "test (macos-latest)",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "lint-sh",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "back-compat",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "lint-workflows",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "lint",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "changes",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "plan",
+                "conclusion": "success"
+              },
+              {
+                "kind": "state",
+                "value": "clean"
+              }
+            ],
+            "merged": true
+          }
+        ]
+      },
+      {
+        "repo": "dhth/omm",
+        "owner": "dhth",
+        "name": "omm",
+        "status": "finished",
+        "prs": [
+          {
+            "number": 142,
+            "title": "ci: bump actions/checkout from 6 to 6.0.2",
+            "url": "https://github.com/dhth/omm/pull/142",
+            "created_at": "2026-06-05T21:29:56Z",
+            "updated_at": "2026-06-05T21:29:57Z",
+            "status": "qualified",
+            "qualifications": [
+              {
+                "kind": "author",
+                "value": "dependabot[bot]"
+              },
+              {
+                "kind": "check",
+                "name": "build (ubuntu-latest)",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "lint-yaml",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "test",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "build (macos-latest)",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "back-compat (macos-latest)",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "lint-workflows",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "back-compat (ubuntu-latest)",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "vulncheck",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "lint",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "changes",
+                "conclusion": "success"
+              },
+              {
+                "kind": "state",
+                "value": "clean"
+              }
+            ],
+            "merged": true
+          }
+        ]
+      },
+      {
+        "repo": "dhth/ecscope",
+        "owner": "dhth",
+        "name": "ecscope",
+        "status": "finished",
+        "prs": [
+          {
+            "number": 150,
+            "title": "ci: bump taiki-e/install-action from 2.79.6 to 2.79.14",
+            "url": "https://github.com/dhth/ecscope/pull/150",
+            "created_at": "2026-06-05T21:34:50Z",
+            "updated_at": "2026-06-05T21:36:22Z",
+            "status": "qualified",
+            "qualifications": [
+              {
+                "kind": "author",
+                "value": "dependabot[bot]"
+              },
+              {
+                "kind": "check",
+                "name": "announce",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "custom-publish-crates",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "publish-homebrew-formula",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "host",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "build-global-artifacts",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "build-local-artifacts (${{ join(matrix.targets, ', ') }})",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "lint-workflows",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "audit",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "build-rust (macos-latest)",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "test-rust (ubuntu-latest)",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "test-rust (macos-latest)",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "lint-gleam",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "build-rust (ubuntu-latest)",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "publish-check",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "lint-rust",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "lint-yaml",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "test-gleam",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "dstlled-diff",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "back-compat",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "build-gleam",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "plan",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "changes",
+                "conclusion": "success"
+              },
+              {
+                "kind": "state",
+                "value": "clean"
+              }
+            ],
+            "merged": true
+          }
+        ]
+      }
+    ]
+  }
+}
