@@ -1,6 +1,7 @@
 name: deps-gh-actions
 
 on:
+  pull_request:
   schedule:
     - cron: '0 2,4,6 25-27 * *'
   workflow_dispatch:
@@ -37,15 +38,11 @@ jobs:
         if: steps.choose-repos.outputs.repositories != ''
         uses: renovatebot/github-action@v46.1.14
         with:
-          docker-volumes: |
-            /tmp:/tmp ;
-            ${{ github.workspace }}/renovate/config:/github-action-config
+          configurationFile: renovate/config/gh-actions.js
           token: ${{ steps.generate-token.outputs.token }}
           renovate-version: 43
         env:
           LOG_LEVEL: 'info'
-          RENOVATE_CONFIG_FILE: /github-action-config/gh-actions.js
           RENOVATE_REPOSITORIES: ${{ steps.choose-repos.outputs.repositories }}
           RENOVATE_GIT_AUTHOR: ${{ vars.DEPS_GIT_AUTHOR }}
           RENOVATE_PLATFORM_COMMIT: enabled
-          RENOVATE_DRY_RUN: full
