@@ -10,7 +10,7 @@ permissions:
   contents: read
 
 jobs:
-  run-renovate:
+  run:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -20,7 +20,7 @@ jobs:
       - name: Choose repositories
         id: choose-repos
         run: |
-          date="2026-06-01"
+          date="2026-06-05"
           repositories="$(npm --prefix renovate/runner run --silent choose-repos -- code "$date" | paste -sd, -)"
 
           if [[ -n "$repositories" ]]; then
