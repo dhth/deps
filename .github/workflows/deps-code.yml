@@ -46,4 +46,3 @@ jobs:
           RENOVATE_REPOSITORIES: ${{ steps.choose-repos.outputs.repositories }}
           RENOVATE_GIT_AUTHOR: ${{ vars.DEPS_GIT_AUTHOR }}
           RENOVATE_PLATFORM_COMMIT: enabled
-          RENOVATE_DRY_RUN: full
