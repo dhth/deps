@@ -5,7 +5,7 @@ export const CONFIG: Config = {
         cohorts: [
             {
                 name: "go-a",
-                days: [1, 15],
+                days: [1, 8, 15],
                 repos: [
                     "dhth/act3",
                     "dhth/commits",
@@ -17,7 +17,7 @@ export const CONFIG: Config = {
             },
             {
                 name: "go-b",
-                days: [2, 16],
+                days: [2, 9, 16],
                 repos: [
                     "dhth/kplay",
                     "dhth/mult",
@@ -29,12 +29,12 @@ export const CONFIG: Config = {
             },
             {
                 name: "go-c",
-                days: [3, 17],
+                days: [3, 10, 17],
                 repos: ["dhth/schemas", "dhth/tflens"],
             },
             {
                 name: "rust-a",
-                days: [4, 18],
+                days: [4, 11, 18],
                 repos: [
                     "dhth/atls",
                     "dhth/bmm",
@@ -46,7 +46,7 @@ export const CONFIG: Config = {
             },
             {
                 name: "rust-b",
-                days: [5, 19],
+                days: [5, 12, 19],
                 repos: [
                     "dhth/ghx",
                     "dhth/grafq",
@@ -58,7 +58,7 @@ export const CONFIG: Config = {
             },
             {
                 name: "rust-c",
-                days: [6, 20],
+                days: [6, 13, 20],
                 repos: [
                     "dhth/squish",
                     "dhth/tash",
@@ -70,7 +70,7 @@ export const CONFIG: Config = {
             },
             {
                 name: "rust-d",
-                days: [7, 21],
+                days: [7, 14, 21],
                 repos: ["dhth/urll"],
             },
         ],

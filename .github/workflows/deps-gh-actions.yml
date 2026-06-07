@@ -20,7 +20,7 @@ jobs:
       - name: Choose repositories
         id: choose-repos
         run: |
-          date="2026-05-25"
+          date="$(date -u +'%Y-%m-%d')"
           repositories="$(npm --prefix renovate/runner run --silent choose-repos -- github-actions "$date" | paste -sd, -)"
 
           if [[ -n "$repositories" ]]; then
