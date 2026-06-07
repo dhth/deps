@@ -1,6 +1,7 @@
 name: deps-gh-actions
 
 on:
+  pull_request:
   schedule:
     - cron: '0 2,4,6 25-27 * *'
   workflow_dispatch:
@@ -19,7 +20,7 @@ jobs:
       - name: Choose repositories
         id: choose-repos
         run: |
-          date="$(date -u +'%Y-%m-%d')"
+          date="2026-05-25"
           repositories="$(npm --prefix renovate/runner run --silent choose-repos -- github-actions "$date" | paste -sd, -)"
 
           if [[ -n "$repositories" ]]; then
