@@ -38,11 +38,14 @@ jobs:
         if: steps.choose-repos.outputs.repositories != ''
         uses: renovatebot/github-action@v46.1.14
         with:
-          configurationFile: renovate/config/code.js
+          docker-volumes: |
+            /tmp:/tmp ;
+            ${{ github.workspace }}/renovate/config:/github-action-config
           token: ${{ steps.generate-token.outputs.token }}
           renovate-version: 43
         env:
           LOG_LEVEL: 'info'
+          RENOVATE_CONFIG_FILE: /github-action-config/code.js
           RENOVATE_REPOSITORIES: ${{ steps.choose-repos.outputs.repositories }}
           RENOVATE_GIT_AUTHOR: ${{ vars.DEPS_GIT_AUTHOR }}
           RENOVATE_PLATFORM_COMMIT: enabled
