@@ -1,0 +1,137 @@
+import type { Config } from "./domain";
+
+export const CONFIG: Config = {
+    code: {
+        cohorts: [
+            {
+                name: "go-a",
+                days: [1, 15],
+                repos: [
+                    "dhth/act3",
+                    "dhth/commits",
+                    "dhth/cueitup",
+                    "dhth/dstll",
+                    "dhth/ecsv",
+                    "dhth/hours",
+                ],
+            },
+            {
+                name: "go-b",
+                days: [2, 16],
+                repos: [
+                    "dhth/kplay",
+                    "dhth/mult",
+                    "dhth/omm",
+                    "dhth/outtasync",
+                    "dhth/prs",
+                    "dhth/punchout",
+                ],
+            },
+            {
+                name: "go-c",
+                days: [3, 17],
+                repos: ["dhth/schemas", "dhth/tflens"],
+            },
+            {
+                name: "rust-a",
+                days: [4, 18],
+                repos: [
+                    "dhth/atls",
+                    "dhth/bmm",
+                    "dhth/crumbs",
+                    "dhth/dfft",
+                    "dhth/ecscope",
+                    "dhth/envee",
+                ],
+            },
+            {
+                name: "rust-b",
+                days: [5, 19],
+                repos: [
+                    "dhth/ghx",
+                    "dhth/grafq",
+                    "dhth/mrj",
+                    "dhth/refit",
+                    "dhth/shfl",
+                    "dhth/squidge",
+                ],
+            },
+            {
+                name: "rust-c",
+                days: [6, 20],
+                repos: [
+                    "dhth/squish",
+                    "dhth/tash",
+                    "dhth/tbll",
+                    "dhth/ting",
+                    "dhth/tomo",
+                    "dhth/unreleased",
+                ],
+            },
+            {
+                name: "rust-d",
+                days: [7, 21],
+                repos: ["dhth/urll"],
+            },
+        ],
+    },
+    "github-actions": {
+        cohorts: [
+            {
+                name: "go",
+                days: [25],
+                repos: [
+                    "dhth/act3",
+                    "dhth/commits",
+                    "dhth/cueitup",
+                    "dhth/dstll",
+                    "dhth/ecsv",
+                    "dhth/hours",
+                    "dhth/kplay",
+                    "dhth/mult",
+                    "dhth/omm",
+                    "dhth/outtasync",
+                    "dhth/prs",
+                    "dhth/punchout",
+                    "dhth/schemas",
+                    "dhth/tflens",
+                ],
+            },
+            {
+                name: "rust",
+                days: [26],
+                repos: [
+                    "dhth/atls",
+                    "dhth/bmm",
+                    "dhth/crumbs",
+                    "dhth/dfft",
+                    "dhth/ecscope",
+                    "dhth/envee",
+                    "dhth/ghx",
+                    "dhth/grafq",
+                    "dhth/mrj",
+                    "dhth/refit",
+                    "dhth/shfl",
+                    "dhth/squidge",
+                    "dhth/squish",
+                    "dhth/tash",
+                    "dhth/tbll",
+                    "dhth/ting",
+                    "dhth/tomo",
+                    "dhth/unreleased",
+                    "dhth/urll",
+                ],
+            },
+            {
+                name: "misc",
+                days: [27],
+                repos: [
+                    "dhth/act3-runner",
+                    "dhth/gh",
+                    "dhth/mrj-runner",
+                    "dhth/unreleased-report",
+                ],
+            },
+        ],
+    },
+};

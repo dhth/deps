@@ -1,0 +1,48 @@
+name: deps-gh-actions
+
+on:
+  pull_request:
+  schedule:
+    - cron: '0 2,4,6 25-27 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  run-renovate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+      - name: Install runner dependencies
+        run: npm --prefix renovate/runner ci
+      - name: Choose repositories
+        id: choose-repos
+        run: |
+          date="$(date -u +'%Y-%m-%d')"
+          repositories="$(npm --prefix renovate/runner run --silent choose-repos -- github-actions "$date" | paste -sd, -)"
+
+          if [[ -n "$repositories" ]]; then
+            echo "repositories=$repositories" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Generate GH token
+        if: steps.choose-repos.outputs.repositories != ''
+        id: generate-token
+        uses: actions/create-github-app-token@v3
+        with:
+          client-id: ${{ secrets.DEPS_APP_CLIENT_ID }}
+          private-key: ${{ secrets.DEPS_APP_PRIVATE_KEY }}
+          owner: dhth
+      - name: Run Renovate
+        if: steps.choose-repos.outputs.repositories != ''
+        uses: renovatebot/github-action@v46
+        with:
+          configurationFile: renovate/config/gh-actions.js
+          token: ${{ steps.generate-token.outputs.token }}
+          renovate-version: 43
+        env:
+          LOG_LEVEL: 'info'
+          RENOVATE_REPOSITORIES: ${{ steps.choose-repos.outputs.repositories }}
+          RENOVATE_GIT_AUTHOR: ${{ vars.DEPS_GIT_AUTHOR }}
+          RENOVATE_PLATFORM_COMMIT: enabled
