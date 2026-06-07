@@ -34,9 +34,22 @@ const config = {
       enabled: false,
     },
     {
-      description: 'Group all non-major dependency updates into one PR.',
+      description: 'Group non-major Go module updates.',
+      matchManagers: ['gomod'],
       matchUpdateTypes: ['minor', 'patch'],
-      groupName: 'non-major updates',
+      groupName: 'gomod non-major updates',
+    },
+    {
+      description: 'Group non-major Cargo updates.',
+      matchManagers: ['cargo'],
+      matchUpdateTypes: ['minor', 'patch'],
+      groupName: 'cargo non-major updates',
+    },
+    {
+      description: 'Group non-major Gleam updates.',
+      matchManagers: ['gleam'],
+      matchUpdateTypes: ['minor', 'patch'],
+      groupName: 'gleam non-major updates',
     },
   ],
 };
