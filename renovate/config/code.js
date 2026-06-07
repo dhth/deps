@@ -1,20 +1,56 @@
-const { buildBaseConfig } = require('./common');
+function parseRepositories() {
+  return (process.env.RENOVATE_REPOSITORIES || '')
+    .split(',')
+    .map((repo) => repo.trim())
+    .filter(Boolean);
+}
 
-const config = buildBaseConfig();
+const repositories = parseRepositories();
 
-config.commitMessagePrefix = 'build: ';
+if (repositories.length === 0) {
+  throw new Error('RENOVATE_REPOSITORIES must be set to a comma-separated OWNER/REPO list.');
+}
 
-config.packageRules = [
-  {
-    description: 'Code lane does not manage GitHub Actions updates.',
-    matchManagers: ['github-actions'],
-    enabled: false,
+const config = {
+  platform: 'github',
+  repositories,
+  onboarding: false,
+  requireConfig: 'ignored',
+  dependencyDashboard: false,
+  timezone: 'UTC',
+  labels: ['dependencies'],
+  branchPrefix: 'renovate/',
+  prConcurrentLimit: 1,
+  branchConcurrentLimit: 1,
+  vulnerabilityAlerts: {
+    enabled: true,
   },
-  {
-    description: 'Group all non-major dependency updates into one PR.',
-    matchUpdateTypes: ['minor', 'patch'],
-    groupName: 'non-major updates',
-  },
-];
+  persistRepoData: true,
+  commitMessagePrefix: 'build: ',
+  packageRules: [
+    {
+      description: 'Code lane does not manage GitHub Actions updates.',
+      matchManagers: ['github-actions'],
+      enabled: false,
+    },
+    {
+      description: 'Group all non-major dependency updates into one PR.',
+      matchUpdateTypes: ['minor', 'patch'],
+      groupName: 'non-major updates',
+    },
+  ],
+};
+
+if (process.env.RENOVATE_DRY_RUN) {
+  config.dryRun = process.env.RENOVATE_DRY_RUN;
+}
+
+if (process.env.RENOVATE_GIT_AUTHOR) {
+  config.gitAuthor = process.env.RENOVATE_GIT_AUTHOR;
+}
+
+if (process.env.RENOVATE_PLATFORM_COMMIT) {
+  config.platformCommit = process.env.RENOVATE_PLATFORM_COMMIT;
+}
 
 module.exports = config;
