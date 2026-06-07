@@ -23,7 +23,7 @@ const config = {
   prConcurrentLimit: 1,
   branchConcurrentLimit: 1,
   vulnerabilityAlerts: {
-    enabled: true,
+    enabled: false,
   },
   persistRepoData: true,
   commitMessagePrefix: 'ci: ',

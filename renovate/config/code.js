@@ -22,17 +22,13 @@ const config = {
   branchPrefix: 'renovate/',
   prConcurrentLimit: 1,
   branchConcurrentLimit: 1,
+  enabledManagers: ['gomod', 'cargo'],
   vulnerabilityAlerts: {
-    enabled: true,
+    enabled: false,
   },
   persistRepoData: true,
   commitMessagePrefix: 'build: ',
   packageRules: [
-    {
-      description: 'Code lane does not manage GitHub Actions updates.',
-      matchManagers: ['github-actions'],
-      enabled: false,
-    },
     {
       description: 'Group non-major Go module updates.',
       matchManagers: ['gomod'],
@@ -44,12 +40,6 @@ const config = {
       matchManagers: ['cargo'],
       matchUpdateTypes: ['minor', 'patch'],
       groupName: 'cargo non-major updates',
-    },
-    {
-      description: 'Group non-major Gleam updates.',
-      matchManagers: ['gleam'],
-      matchUpdateTypes: ['minor', 'patch'],
-      groupName: 'gleam non-major updates',
     },
   ],
 };
