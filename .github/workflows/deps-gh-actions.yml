@@ -1,7 +1,6 @@
 name: deps-gh-actions
 
 on:
-  pull_request:
   schedule:
     - cron: '0 2,4,6 25-27 * *'
   workflow_dispatch:
@@ -46,3 +45,4 @@ jobs:
           RENOVATE_REPOSITORIES: ${{ steps.choose-repos.outputs.repositories }}
           RENOVATE_GIT_AUTHOR: ${{ vars.DEPS_GIT_AUTHOR }}
           RENOVATE_PLATFORM_COMMIT: enabled
+          RENOVATE_DRY_RUN: full
