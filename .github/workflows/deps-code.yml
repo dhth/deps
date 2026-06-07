@@ -36,7 +36,7 @@ jobs:
           owner: dhth
       - name: Run Renovate
         if: steps.choose-repos.outputs.repositories != ''
-        uses: renovatebot/github-action@v46
+        uses: renovatebot/github-action@v46.1.14
         with:
           configurationFile: renovate/config/code.js
           token: ${{ steps.generate-token.outputs.token }}
