@@ -20,6 +20,7 @@ const config = {
   timezone: 'UTC',
   labels: ['dependencies'],
   branchPrefix: 'renovate/',
+  rangeStrategy: 'bump',
   prConcurrentLimit: 1,
   branchConcurrentLimit: 1,
   enabledManagers: ['gomod', 'cargo'],
@@ -30,16 +31,16 @@ const config = {
   commitMessagePrefix: 'build: ',
   packageRules: [
     {
-      description: 'Group non-major Go module updates.',
+      description: 'Group non-major Go module updates',
       matchManagers: ['gomod'],
       matchUpdateTypes: ['minor', 'patch'],
-      groupName: 'gomod non-major updates',
+      groupName: 'go dependencies',
     },
     {
-      description: 'Group non-major Cargo updates.',
+      description: 'Group non-major Cargo updates',
       matchManagers: ['cargo'],
       matchUpdateTypes: ['minor', 'patch'],
-      groupName: 'cargo non-major updates',
+      groupName: 'cargo dependencies',
     },
   ],
 };
