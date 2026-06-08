@@ -7,11 +7,9 @@ export const CONFIG: Config = {
                 name: "test",
                 days: [8],
                 repos: [
-                    "dhth/commits",
-                    "dhth/dstll",
-                    "dhth/ecsv",
-                    "dhth/grafq",
-                    "dhth/hours",
+                    "dhth/outtasync",
+                    "dhth/prs",
+                    "dhth/punchout",
                 ],
             },
             {
