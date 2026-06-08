@@ -34,12 +34,15 @@ const config = {
       matchManagers: ['gomod'],
       matchUpdateTypes: ['minor', 'patch'],
       groupName: 'go dependencies',
+      minimumGroupSize: 2,
+      postUpdateOptions: ['gomodTidy'],
     },
     {
       description: 'Group non-major Cargo updates',
       matchManagers: ['cargo'],
       matchUpdateTypes: ['minor', 'patch'],
       groupName: 'cargo dependencies',
+      minimumGroupSize: 2,
     },
   ],
 };

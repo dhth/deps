@@ -33,6 +33,7 @@ const config = {
       description: 'Group all GitHub Actions updates into one PR.',
       matchManagers: ['github-actions'],
       groupName: 'github actions',
+      minimumGroupSize: 2,
     },
     {
       description: 'Ignore generated Rust release workflows.',
