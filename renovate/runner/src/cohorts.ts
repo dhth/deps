@@ -8,7 +8,9 @@ export const CONFIG: Config = {
                 days: [8],
                 repos: [
                     "dhth/commits",
+                    "dhth/ecsv",
                     "dhth/grafq",
+                    "dhth/hours",
                 ],
             },
             {
