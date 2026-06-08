@@ -26,6 +26,7 @@ const config = {
     enabled: false,
   },
   persistRepoData: true,
+  commitMessagePrefix: 'ci: ',
   commitMessageAction: 'update',
   enabledManagers: ['github-actions'],
   packageRules: [
