@@ -43,18 +43,7 @@ const config = {
       enabled: false,
     },
   ],
+  platformCommit: 'enabled',
 };
-
-if (process.env.RENOVATE_DRY_RUN) {
-  config.dryRun = process.env.RENOVATE_DRY_RUN;
-}
-
-if (process.env.RENOVATE_GIT_AUTHOR) {
-  config.gitAuthor = process.env.RENOVATE_GIT_AUTHOR;
-}
-
-if (process.env.RENOVATE_PLATFORM_COMMIT) {
-  config.platformCommit = process.env.RENOVATE_PLATFORM_COMMIT;
-}
 
 module.exports = config;

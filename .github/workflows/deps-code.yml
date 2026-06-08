@@ -44,4 +44,3 @@ jobs:
         env:
           LOG_LEVEL: 'info'
           RENOVATE_REPOSITORIES: ${{ steps.choose-repos.outputs.repositories }}
-          RENOVATE_PLATFORM_COMMIT: enabled
