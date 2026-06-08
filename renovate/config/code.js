@@ -28,7 +28,6 @@ const config = {
     enabled: false,
   },
   persistRepoData: true,
-  commitMessagePrefix: 'build: ',
   packageRules: [
     {
       description: 'Group non-major Go module updates',
