@@ -1,9 +1,9 @@
 {
   "version": 1,
   "run": {
-    "started_at": "2026-05-30T04:22:49.342159811Z",
-    "finished_at": "2026-05-30T04:22:52.694078442Z",
-    "took_ms": 3351,
+    "started_at": "2026-06-09T06:28:24.256238040Z",
+    "finished_at": "2026-06-09T06:28:27.716850101Z",
+    "took_ms": 3460,
     "mode": "execute",
     "config": {
       "base_branch": "main",
@@ -20,56 +20,28 @@
       }
     },
     "summary": {
-      "num_disqualifications": 3,
+      "num_disqualifications": 1,
       "num_errors": 0,
-      "num_merged": 6
+      "num_merged": 5
     },
     "repos": [
       {
-        "repo": "dhth/commits",
+        "repo": "dhth/tbll",
         "owner": "dhth",
-        "name": "commits",
+        "name": "tbll",
         "status": "finished",
         "prs": [
           {
-            "number": 65,
-            "title": "ci: bump goreleaser/goreleaser-action from 6 to 7 in the github-actions group",
-            "url": "https://github.com/dhth/commits/pull/65",
-            "created_at": "2026-05-28T18:55:23Z",
-            "updated_at": "2026-05-28T18:55:25Z",
+            "number": 102,
+            "title": "ci: update github actions to v2.81.8",
+            "url": "https://github.com/dhth/tbll/pull/102",
+            "created_at": "2026-06-09T04:31:33Z",
+            "updated_at": "2026-06-09T04:31:33Z",
             "status": "disqualified",
             "qualifications": [
               {
                 "kind": "author",
-                "value": "dependabot[bot]"
-              }
-            ],
-            "disqualification": {
-              "kind": "check",
-              "name": "release-check",
-              "conclusion": "failure"
-            },
-            "merged": false
-          }
-        ]
-      },
-      {
-        "repo": "dhth/mrj",
-        "owner": "dhth",
-        "name": "mrj",
-        "status": "finished",
-        "prs": [
-          {
-            "number": 110,
-            "title": "build: bump octocrab from 0.49.7 to 0.51.0",
-            "url": "https://github.com/dhth/mrj/pull/110",
-            "created_at": "2026-05-29T19:55:59Z",
-            "updated_at": "2026-05-29T19:55:59Z",
-            "status": "disqualified",
-            "qualifications": [
-              {
-                "kind": "author",
-                "value": "dependabot[bot]"
+                "value": "dhths-deps[bot]"
               },
               {
                 "kind": "check",
@@ -78,12 +50,12 @@
               },
               {
                 "kind": "check",
-                "name": "publish-homebrew-formula",
+                "name": "custom-release-packages",
                 "conclusion": "success"
               },
               {
                 "kind": "check",
-                "name": "custom-publish-crates",
+                "name": "publish-homebrew-formula",
                 "conclusion": "success"
               },
               {
@@ -103,133 +75,7 @@
               },
               {
                 "kind": "check",
-                "name": "lint-yaml",
-                "conclusion": "success"
-              },
-              {
-                "kind": "check",
-                "name": "lint-workflows",
-                "conclusion": "success"
-              }
-            ],
-            "disqualification": {
-              "kind": "check",
-              "name": "build (ubuntu-latest)",
-              "conclusion": "failure"
-            },
-            "merged": false
-          }
-        ]
-      },
-      {
-        "repo": "dhth/bmm",
-        "owner": "dhth",
-        "name": "bmm",
-        "status": "finished",
-        "prs": [
-          {
-            "number": 135,
-            "title": "build: bump sqlx from 0.8.6 to 0.9.0",
-            "url": "https://github.com/dhth/bmm/pull/135",
-            "created_at": "2026-05-29T19:55:21Z",
-            "updated_at": "2026-05-29T19:55:22Z",
-            "status": "disqualified",
-            "qualifications": [
-              {
-                "kind": "author",
-                "value": "dependabot[bot]"
-              },
-              {
-                "kind": "check",
-                "name": "announce",
-                "conclusion": "success"
-              },
-              {
-                "kind": "check",
-                "name": "publish-homebrew-formula",
-                "conclusion": "success"
-              },
-              {
-                "kind": "check",
-                "name": "custom-publish-crates",
-                "conclusion": "success"
-              },
-              {
-                "kind": "check",
-                "name": "host",
-                "conclusion": "success"
-              },
-              {
-                "kind": "check",
-                "name": "build-global-artifacts",
-                "conclusion": "success"
-              },
-              {
-                "kind": "check",
-                "name": "build-local-artifacts (${{ join(matrix.targets, ', ') }})",
-                "conclusion": "success"
-              },
-              {
-                "kind": "check",
-                "name": "lint-yaml",
-                "conclusion": "success"
-              },
-              {
-                "kind": "check",
-                "name": "lint-workflows",
-                "conclusion": "success"
-              },
-              {
-                "kind": "check",
-                "name": "dstlled-diff",
-                "conclusion": "success"
-              },
-              {
-                "kind": "check",
-                "name": "lint-sh",
-                "conclusion": "success"
-              }
-            ],
-            "disqualification": {
-              "kind": "check",
-              "name": "build (ubuntu-latest)",
-              "conclusion": "failure"
-            },
-            "merged": false
-          }
-        ]
-      },
-      {
-        "repo": "dhth/urll",
-        "owner": "dhth",
-        "name": "urll",
-        "status": "finished",
-        "prs": [
-          {
-            "number": 60,
-            "title": "build: bump scraper from 0.26.0 to 0.27.0",
-            "url": "https://github.com/dhth/urll/pull/60",
-            "created_at": "2026-05-29T19:55:12Z",
-            "updated_at": "2026-05-29T19:55:36Z",
-            "status": "qualified",
-            "qualifications": [
-              {
-                "kind": "author",
-                "value": "dependabot[bot]"
-              },
-              {
-                "kind": "check",
-                "name": "lint-workflows",
-                "conclusion": "success"
-              },
-              {
-                "kind": "check",
-                "name": "lint-yaml",
-                "conclusion": "success"
-              },
-              {
-                "kind": "check",
-                "name": "audit",
+                "name": "build (macos-latest)",
                 "conclusion": "success"
               },
               {
@@ -239,12 +85,239 @@
               },
               {
                 "kind": "check",
-                "name": "dstlled-diff",
+                "name": "test (ubuntu-latest)",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "lint-workflows",
+                "conclusion": "success"
+              }
+            ],
+            "disqualification": {
+              "kind": "check",
+              "name": "audit",
+              "conclusion": "failure"
+            },
+            "merged": false
+          }
+        ]
+      },
+      {
+        "repo": "dhth/outtasync",
+        "owner": "dhth",
+        "name": "outtasync",
+        "status": "finished",
+        "prs": [
+          {
+            "number": 166,
+            "title": "build: update go dependencies",
+            "url": "https://github.com/dhth/outtasync/pull/166",
+            "created_at": "2026-06-08T17:48:04Z",
+            "updated_at": "2026-06-08T17:48:06Z",
+            "status": "qualified",
+            "qualifications": [
+              {
+                "kind": "author",
+                "value": "dhths-deps[bot]"
+              },
+              {
+                "kind": "check",
+                "name": "lint-workflows",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "lint-yaml",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "release-check",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "test",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "vulncheck",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "build (macos-latest)",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "build (ubuntu-latest)",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "lint",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "changes",
+                "conclusion": "success"
+              },
+              {
+                "kind": "state",
+                "value": "clean"
+              }
+            ],
+            "merged": true
+          }
+        ]
+      },
+      {
+        "repo": "dhth/kplay",
+        "owner": "dhth",
+        "name": "kplay",
+        "status": "finished",
+        "prs": [
+          {
+            "number": 171,
+            "title": "build: update aws sdk",
+            "url": "https://github.com/dhth/kplay/pull/171",
+            "created_at": "2026-06-09T04:26:10Z",
+            "updated_at": "2026-06-09T04:31:22Z",
+            "status": "qualified",
+            "qualifications": [
+              {
+                "kind": "author",
+                "value": "dhths-deps[bot]"
+              },
+              {
+                "kind": "check",
+                "name": "lint-gleam",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "lint-yaml",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "release-check",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "build-gleam",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "lint-workflows",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "vulncheck",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "test-go (ubuntu-latest)",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "test-go (macos-latest)",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "build-go (macos-latest)",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "build-go (ubuntu-latest)",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "lint-go",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "changes",
+                "conclusion": "success"
+              },
+              {
+                "kind": "state",
+                "value": "clean"
+              }
+            ],
+            "merged": true
+          }
+        ]
+      },
+      {
+        "repo": "dhth/hours",
+        "owner": "dhth",
+        "name": "hours",
+        "status": "finished",
+        "prs": [
+          {
+            "number": 169,
+            "title": "build: update go dependencies",
+            "url": "https://github.com/dhth/hours/pull/169",
+            "created_at": "2026-06-08T01:27:04Z",
+            "updated_at": "2026-06-08T01:27:05Z",
+            "status": "qualified",
+            "qualifications": [
+              {
+                "kind": "author",
+                "value": "dhths-deps[bot]"
+              },
+              {
+                "kind": "check",
+                "name": "release-check",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "lint-workflows",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "lint-yaml",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "back-compat (macos-latest)",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "back-compat (ubuntu-latest)",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "vulncheck",
                 "conclusion": "success"
               },
               {
                 "kind": "check",
                 "name": "test (ubuntu-latest)",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "test (macos-latest)",
                 "conclusion": "success"
               },
               {
@@ -283,16 +356,21 @@
         "status": "finished",
         "prs": [
           {
-            "number": 121,
-            "title": "build: bump github.com/gkampitakis/go-snaps from 0.5.21 to 0.5.22 in the non-major-updates group",
-            "url": "https://github.com/dhth/punchout/pull/121",
-            "created_at": "2026-05-29T19:54:02Z",
-            "updated_at": "2026-05-29T19:54:03Z",
+            "number": 126,
+            "title": "build: update go dependencies",
+            "url": "https://github.com/dhth/punchout/pull/126",
+            "created_at": "2026-06-08T17:49:04Z",
+            "updated_at": "2026-06-08T17:49:07Z",
             "status": "qualified",
             "qualifications": [
               {
                 "kind": "author",
-                "value": "dependabot[bot]"
+                "value": "dhths-deps[bot]"
+              },
+              {
+                "kind": "check",
+                "name": "release-check",
+                "conclusion": "success"
               },
               {
                 "kind": "check",
@@ -306,27 +384,7 @@
               },
               {
                 "kind": "check",
-                "name": "release-check",
-                "conclusion": "success"
-              },
-              {
-                "kind": "check",
-                "name": "test (macos-latest)",
-                "conclusion": "success"
-              },
-              {
-                "kind": "check",
-                "name": "build (ubuntu-latest)",
-                "conclusion": "success"
-              },
-              {
-                "kind": "check",
                 "name": "vulncheck",
-                "conclusion": "success"
-              },
-              {
-                "kind": "check",
-                "name": "build (macos-latest)",
                 "conclusion": "success"
               },
               {
@@ -341,44 +399,7 @@
               },
               {
                 "kind": "check",
-                "name": "changes",
-                "conclusion": "success"
-              },
-              {
-                "kind": "state",
-                "value": "clean"
-              }
-            ],
-            "merged": true
-          }
-        ]
-      },
-      {
-        "repo": "dhth/tflens",
-        "owner": "dhth",
-        "name": "tflens",
-        "status": "finished",
-        "prs": [
-          {
-            "number": 37,
-            "title": "build: bump github.com/gkampitakis/go-snaps from 0.5.21 to 0.5.22 in the non-major-updates group",
-            "url": "https://github.com/dhth/tflens/pull/37",
-            "created_at": "2026-05-29T19:56:19Z",
-            "updated_at": "2026-05-29T19:56:20Z",
-            "status": "qualified",
-            "qualifications": [
-              {
-                "kind": "author",
-                "value": "dependabot[bot]"
-              },
-              {
-                "kind": "check",
-                "name": "lint-yaml",
-                "conclusion": "success"
-              },
-              {
-                "kind": "check",
-                "name": "lint-workflows",
+                "name": "test (macos-latest)",
                 "conclusion": "success"
               },
               {
@@ -393,26 +414,6 @@
               },
               {
                 "kind": "check",
-                "name": "vulncheck",
-                "conclusion": "success"
-              },
-              {
-                "kind": "check",
-                "name": "test (ubuntu-latest)",
-                "conclusion": "success"
-              },
-              {
-                "kind": "check",
-                "name": "test (macos-latest)",
-                "conclusion": "success"
-              },
-              {
-                "kind": "check",
-                "name": "lint",
-                "conclusion": "success"
-              },
-              {
-                "kind": "check",
                 "name": "changes",
                 "conclusion": "success"
               },
@@ -426,201 +427,22 @@
         ]
       },
       {
-        "repo": "dhth/kplay",
+        "repo": "dhth/grafq",
         "owner": "dhth",
-        "name": "kplay",
+        "name": "grafq",
         "status": "finished",
         "prs": [
           {
-            "number": 163,
-            "title": "build: bump github.com/gkampitakis/go-snaps from 0.5.21 to 0.5.22 in the non-major-updates group",
-            "url": "https://github.com/dhth/kplay/pull/163",
-            "created_at": "2026-05-29T19:53:56Z",
-            "updated_at": "2026-05-29T19:53:57Z",
+            "number": 54,
+            "title": "build: update cargo dependencies",
+            "url": "https://github.com/dhth/grafq/pull/54",
+            "created_at": "2026-06-08T00:53:35Z",
+            "updated_at": "2026-06-08T01:26:43Z",
             "status": "qualified",
             "qualifications": [
               {
                 "kind": "author",
-                "value": "dependabot[bot]"
-              },
-              {
-                "kind": "check",
-                "name": "build-gleam",
-                "conclusion": "success"
-              },
-              {
-                "kind": "check",
-                "name": "lint-workflows",
-                "conclusion": "success"
-              },
-              {
-                "kind": "check",
-                "name": "lint-yaml",
-                "conclusion": "success"
-              },
-              {
-                "kind": "check",
-                "name": "lint-gleam",
-                "conclusion": "success"
-              },
-              {
-                "kind": "check",
-                "name": "release-check",
-                "conclusion": "success"
-              },
-              {
-                "kind": "check",
-                "name": "vulncheck",
-                "conclusion": "success"
-              },
-              {
-                "kind": "check",
-                "name": "build-go (ubuntu-latest)",
-                "conclusion": "success"
-              },
-              {
-                "kind": "check",
-                "name": "build-go (macos-latest)",
-                "conclusion": "success"
-              },
-              {
-                "kind": "check",
-                "name": "test-go (macos-latest)",
-                "conclusion": "success"
-              },
-              {
-                "kind": "check",
-                "name": "test-go (ubuntu-latest)",
-                "conclusion": "success"
-              },
-              {
-                "kind": "check",
-                "name": "lint-go",
-                "conclusion": "success"
-              },
-              {
-                "kind": "check",
-                "name": "changes",
-                "conclusion": "success"
-              },
-              {
-                "kind": "state",
-                "value": "clean"
-              }
-            ],
-            "merged": true
-          }
-        ]
-      },
-      {
-        "repo": "dhth/hours",
-        "owner": "dhth",
-        "name": "hours",
-        "status": "finished",
-        "prs": [
-          {
-            "number": 161,
-            "title": "build: bump github.com/gkampitakis/go-snaps from 0.5.21 to 0.5.22 in the non-major-updates group",
-            "url": "https://github.com/dhth/hours/pull/161",
-            "created_at": "2026-05-29T19:53:59Z",
-            "updated_at": "2026-05-29T19:53:59Z",
-            "status": "qualified",
-            "qualifications": [
-              {
-                "kind": "author",
-                "value": "dependabot[bot]"
-              },
-              {
-                "kind": "check",
-                "name": "release-check",
-                "conclusion": "success"
-              },
-              {
-                "kind": "check",
-                "name": "lint-workflows",
-                "conclusion": "success"
-              },
-              {
-                "kind": "check",
-                "name": "lint-yaml",
-                "conclusion": "success"
-              },
-              {
-                "kind": "check",
-                "name": "build (macos-latest)",
-                "conclusion": "success"
-              },
-              {
-                "kind": "check",
-                "name": "build (ubuntu-latest)",
-                "conclusion": "success"
-              },
-              {
-                "kind": "check",
-                "name": "vulncheck",
-                "conclusion": "success"
-              },
-              {
-                "kind": "check",
-                "name": "test (macos-latest)",
-                "conclusion": "success"
-              },
-              {
-                "kind": "check",
-                "name": "back-compat (macos-latest)",
-                "conclusion": "success"
-              },
-              {
-                "kind": "check",
-                "name": "back-compat (ubuntu-latest)",
-                "conclusion": "success"
-              },
-              {
-                "kind": "check",
-                "name": "lint",
-                "conclusion": "success"
-              },
-              {
-                "kind": "check",
-                "name": "test (ubuntu-latest)",
-                "conclusion": "success"
-              },
-              {
-                "kind": "check",
-                "name": "changes",
-                "conclusion": "success"
-              },
-              {
-                "kind": "state",
-                "value": "clean"
-              }
-            ],
-            "merged": true
-          }
-        ]
-      },
-      {
-        "repo": "dhth/dfft",
-        "owner": "dhth",
-        "name": "dfft",
-        "status": "finished",
-        "prs": [
-          {
-            "number": 113,
-            "title": "build: bump similar from 3.1.0 to 3.1.1 in the non-major-updates group",
-            "url": "https://github.com/dhth/dfft/pull/113",
-            "created_at": "2026-05-29T19:56:05Z",
-            "updated_at": "2026-05-29T19:56:29Z",
-            "status": "qualified",
-            "qualifications": [
-              {
-                "kind": "author",
-                "value": "dependabot[bot]"
-              },
-              {
-                "kind": "check",
-                "name": "announce",
-                "conclusion": "success"
+                "value": "dhths-deps[bot]"
               },
               {
                 "kind": "check",
@@ -634,7 +456,7 @@
               },
               {
                 "kind": "check",
-                "name": "host",
+                "name": "announce",
                 "conclusion": "success"
               },
               {
@@ -644,12 +466,12 @@
               },
               {
                 "kind": "check",
-                "name": "build-local-artifacts (${{ join(matrix.targets, ', ') }})",
+                "name": "host",
                 "conclusion": "success"
               },
               {
                 "kind": "check",
-                "name": "lint-yaml",
+                "name": "build-local-artifacts (${{ join(matrix.targets, ', ') }})",
                 "conclusion": "success"
               },
               {
@@ -659,47 +481,32 @@
               },
               {
                 "kind": "check",
-                "name": "build-macos-latest-default",
+                "name": "lint-yaml",
                 "conclusion": "success"
               },
               {
                 "kind": "check",
-                "name": "test-ubuntu-latest-no-sound",
+                "name": "build (macos-latest)",
                 "conclusion": "success"
               },
               {
                 "kind": "check",
-                "name": "build-macos-latest-no-sound",
+                "name": "lint",
                 "conclusion": "success"
               },
               {
                 "kind": "check",
-                "name": "test-macos-latest-default",
+                "name": "test (macos-latest)",
                 "conclusion": "success"
               },
               {
                 "kind": "check",
-                "name": "test-ubuntu-latest-default",
+                "name": "test (ubuntu-latest)",
                 "conclusion": "success"
               },
               {
                 "kind": "check",
-                "name": "build-ubuntu-latest-default",
-                "conclusion": "success"
-              },
-              {
-                "kind": "check",
-                "name": "test-macos-latest-no-sound",
-                "conclusion": "success"
-              },
-              {
-                "kind": "check",
-                "name": "build-ubuntu-latest-no-sound",
-                "conclusion": "success"
-              },
-              {
-                "kind": "check",
-                "name": "publish-check",
+                "name": "build (ubuntu-latest)",
                 "conclusion": "success"
               },
               {
@@ -709,27 +516,12 @@
               },
               {
                 "kind": "check",
-                "name": "lint-default",
-                "conclusion": "success"
-              },
-              {
-                "kind": "check",
-                "name": "dstlled-diff",
-                "conclusion": "success"
-              },
-              {
-                "kind": "check",
-                "name": "lint-no-sound",
+                "name": "plan",
                 "conclusion": "success"
               },
               {
                 "kind": "check",
                 "name": "changes",
-                "conclusion": "success"
-              },
-              {
-                "kind": "check",
-                "name": "plan",
                 "conclusion": "success"
               },
               {
