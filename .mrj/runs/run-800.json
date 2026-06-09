@@ -1,0 +1,108 @@
+{
+  "version": 1,
+  "run": {
+    "started_at": "2026-06-09T08:18:52.367727390Z",
+    "finished_at": "2026-06-09T08:18:53.692492226Z",
+    "took_ms": 1324,
+    "mode": "execute",
+    "config": {
+      "base_branch": "main",
+      "merge_if_blocked": false,
+      "merge_if_checks_skipped": true,
+      "merge_type": "squash",
+      "sort_by": "created",
+      "sort_direction": "asc",
+      "flags": {
+        "show_repos_with_no_prs": false,
+        "show_prs_from_untrusted_authors": false,
+        "show_prs_with_unmatched_head": false,
+        "skip_disqualifications_in_summary": false
+      }
+    },
+    "summary": {
+      "num_disqualifications": 1,
+      "num_errors": 0,
+      "num_merged": 0
+    },
+    "repos": [
+      {
+        "repo": "dhth/tbll",
+        "owner": "dhth",
+        "name": "tbll",
+        "status": "finished",
+        "prs": [
+          {
+            "number": 102,
+            "title": "ci: update github actions to v2.81.8",
+            "url": "https://github.com/dhth/tbll/pull/102",
+            "created_at": "2026-06-09T04:31:33Z",
+            "updated_at": "2026-06-09T04:31:33Z",
+            "status": "disqualified",
+            "qualifications": [
+              {
+                "kind": "author",
+                "value": "dhths-deps[bot]"
+              },
+              {
+                "kind": "check",
+                "name": "announce",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "custom-release-packages",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "publish-homebrew-formula",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "host",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "build-global-artifacts",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "build-local-artifacts (${{ join(matrix.targets, ', ') }})",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "build (macos-latest)",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "test (macos-latest)",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "test (ubuntu-latest)",
+                "conclusion": "success"
+              },
+              {
+                "kind": "check",
+                "name": "lint-workflows",
+                "conclusion": "success"
+              }
+            ],
+            "disqualification": {
+              "kind": "check",
+              "name": "audit",
+              "conclusion": "failure"
+            },
+            "merged": false
+          }
+        ]
+      }
+    ]
+  }
+}
