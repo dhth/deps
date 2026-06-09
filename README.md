@@ -1,4 +1,4 @@
-# mrj-runner
+# deps
 
 A runner for [mrj](https://github.com/dhth/mrj).
 

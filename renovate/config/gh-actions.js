@@ -15,34 +15,13 @@ const config = {
   platform: 'github',
   repositories,
   onboarding: false,
-  requireConfig: 'ignored',
+  requireConfig: 'required',
   dependencyDashboard: false,
   timezone: 'UTC',
-  labels: ['dependencies'],
-  branchPrefix: 'renovate/',
-  prConcurrentLimit: 1,
-  branchConcurrentLimit: 1,
-  vulnerabilityAlerts: {
-    enabled: false,
-  },
   persistRepoData: true,
   commitMessagePrefix: 'ci: ',
   commitMessageAction: 'update',
   enabledManagers: ['github-actions'],
-  packageRules: [
-    {
-      description: 'Group all GitHub Actions updates into one PR.',
-      matchManagers: ['github-actions'],
-      groupName: 'github actions',
-      minimumGroupSize: 2,
-    },
-    {
-      description: 'Ignore generated Rust release workflows.',
-      matchManagers: ['github-actions'],
-      matchFileNames: ['.github/workflows/release.yml'],
-      enabled: false,
-    },
-  ],
   platformCommit: 'enabled',
 };
 

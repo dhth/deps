@@ -1,0 +1,20 @@
+{
+  "description": "Shared Go dependency policy",
+  "packageRules": [
+    {
+      "description": "Group non-major Go module updates",
+      "matchManagers": [
+        "gomod"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "groupName": "go dependencies",
+      "minimumGroupSize": 2,
+      "postUpdateOptions": [
+        "gomodTidy"
+      ]
+    }
+  ]
+}

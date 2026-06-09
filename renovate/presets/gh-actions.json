@@ -1,0 +1,13 @@
+{
+  "description": "Shared GitHub Actions dependency policy",
+  "packageRules": [
+    {
+      "description": "Group all GitHub Actions updates into one PR",
+      "matchManagers": [
+        "github-actions"
+      ],
+      "groupName": "github actions",
+      "minimumGroupSize": 2
+    }
+  ]
+}

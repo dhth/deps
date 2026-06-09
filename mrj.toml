@@ -16,7 +16,7 @@ repos = [
     "dhth/grafq",
     "dhth/hours",
     "dhth/kplay",
-    "dhth/mrj-runner",
+    "dhth/deps",
     "dhth/mrj",
     "dhth/mult",
     "dhth/omm",

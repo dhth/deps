@@ -5,11 +5,9 @@ export const CONFIG: Config = {
         cohorts: [
             {
                 name: "test",
-                days: [8],
+                days: [9],
                 repos: [
-                    "dhth/outtasync",
-                    "dhth/prs",
-                    "dhth/punchout",
+                    "dhth/kplay",
                 ],
             },
             {
@@ -87,6 +85,13 @@ export const CONFIG: Config = {
     "github-actions": {
         cohorts: [
             {
+                name: "test",
+                days: [9],
+                repos: [
+                    "dhth/tbll",
+                ],
+            },
+            {
                 name: "go",
                 days: [25],
                 repos: [
@@ -137,7 +142,7 @@ export const CONFIG: Config = {
                 repos: [
                     "dhth/act3-runner",
                     "dhth/gh",
-                    "dhth/mrj-runner",
+                    "dhth/deps",
                     "dhth/unreleased-report",
                 ],
             },

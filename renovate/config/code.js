@@ -15,39 +15,15 @@ const config = {
   platform: 'github',
   repositories,
   onboarding: false,
-  requireConfig: 'ignored',
+  requireConfig: 'required',
   dependencyDashboard: false,
   timezone: 'UTC',
-  labels: ['dependencies'],
-  branchPrefix: 'renovate/',
   rangeStrategy: 'bump',
-  prConcurrentLimit: 1,
-  branchConcurrentLimit: 1,
   enabledManagers: ['gomod', 'cargo'],
-  vulnerabilityAlerts: {
-    enabled: false,
-  },
   persistRepoData: true,
   commitMessagePrefix: 'build: ',
   commitMessageAction: 'update',
-  packageRules: [
-    {
-      description: 'Group non-major Go module updates',
-      matchManagers: ['gomod'],
-      matchUpdateTypes: ['minor', 'patch'],
-      groupName: 'go dependencies',
-      minimumGroupSize: 2,
-      postUpdateOptions: ['gomodTidy'],
-    },
-    {
-      description: 'Group non-major Cargo updates',
-      matchManagers: ['cargo'],
-      matchUpdateTypes: ['minor', 'patch'],
-      groupName: 'cargo dependencies',
-      minimumGroupSize: 2,
-    },
-  ],
-    platformCommit: 'enabled',
+  platformCommit: 'enabled',
 };
 
 module.exports = config;
