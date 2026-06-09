@@ -37,7 +37,7 @@ repos = [
     "dhth/unreleased",
     "dhth/urll",
 ]
-trusted_authors = ["dhths-deps[bot]", "github-actions[bot]"]
+trusted_authors = ["deps-ci[bot]", "github-actions[bot]"]
 base_branch = "main"
 merge_if_blocked = false
 merge_if_checks_skipped = true
