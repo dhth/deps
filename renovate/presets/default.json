@@ -1,0 +1,12 @@
+{
+  "description": "Fleet-wide Renovate defaults",
+  "labels": [
+    "dependencies"
+  ],
+  "branchPrefix": "renovate/",
+  "prConcurrentLimit": 1,
+  "branchConcurrentLimit": 1,
+  "vulnerabilityAlerts": {
+    "enabled": false
+  }
+}

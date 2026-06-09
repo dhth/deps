@@ -1,0 +1,43 @@
+name: deps-code
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+      - name: Install runner dependencies
+        run: npm --prefix renovate/runner ci
+      - name: Choose repositories
+        id: choose-repos
+        run: |
+          date="$(date -u +'%Y-%m-%d')"
+          repositories="$(npm --prefix renovate/runner run --silent choose-repos -- code "$date" | paste -sd, -)"
+
+          if [[ -n "$repositories" ]]; then
+            echo "repositories=$repositories" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Generate GH token
+        if: steps.choose-repos.outputs.repositories != ''
+        id: generate-token
+        uses: actions/create-github-app-token@v3
+        with:
+          client-id: ${{ secrets.DEPS_APP_CLIENT_ID }}
+          private-key: ${{ secrets.DEPS_APP_PRIVATE_KEY }}
+          owner: dhth
+      - name: Run Renovate
+        if: steps.choose-repos.outputs.repositories != ''
+        uses: renovatebot/github-action@v46.1.14
+        with:
+          configurationFile: renovate/config/code.js
+          token: ${{ steps.generate-token.outputs.token }}
+          renovate-version: 43
+        env:
+          LOG_LEVEL: 'info'
+          RENOVATE_REPOSITORIES: ${{ steps.choose-repos.outputs.repositories }}

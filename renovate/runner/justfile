@@ -1,0 +1,14 @@
+@default:
+    just --choose
+
+run:
+    npm run --silent choose-repos -- code "$(date -u +'%Y-%m-%d')"
+
+fmt:
+    npm run format
+
+check:
+    npm run typecheck
+
+lint:
+    npm run lint

@@ -1,0 +1,27 @@
+{
+  "description": "Shared Rust dependency policy",
+  "packageRules": [
+    {
+      "description": "Group non-major Cargo updates",
+      "matchManagers": [
+        "cargo"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "groupName": "cargo dependencies",
+      "minimumGroupSize": 2
+    },
+    {
+      "description": "Ignore generated Rust release workflows for GitHub Actions updates",
+      "matchManagers": [
+        "github-actions"
+      ],
+      "matchFileNames": [
+        ".github/workflows/release.yml"
+      ],
+      "enabled": false
+    }
+  ]
+}

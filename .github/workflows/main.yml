@@ -13,6 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       mrj: ${{ steps.filter.outputs.mrj }}
+      renovate-presets: ${{ steps.filter.outputs.renovate-presets }}
+      renovate-runner: ${{ steps.filter.outputs.renovate-runner }}
       sh: ${{ steps.filter.outputs.sh }}
       workflows: ${{ steps.filter.outputs.workflows }}
       yml: ${{ steps.filter.outputs.yml }}
@@ -25,10 +27,16 @@ jobs:
           filters: |
             mrj:
               - "mrj.toml"
-              - ".github/workflows/ci.yml"
+              - ".github/workflows/main.yml"
+            renovate-presets:
+              - "renovate/presets/**"
+              - ".github/workflows/main.yml"
+            renovate-runner:
+              - "renovate/runner/**"
+              - ".github/workflows/main.yml"
             sh:
-              - "**/.sh"
-              - ".github/workflows/ci.yml"
+              - "**/*.sh"
+              - ".github/workflows/main.yml"
             workflows:
               - ".github/workflows/**.yml"
             yml:
@@ -49,6 +57,36 @@ jobs:
       - name: Validate
         run: |
           mrj config validate
+
+  renovate-presets-checks:
+    needs: changes
+    if: ${{ needs.changes.outputs.renovate-presets == 'true' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+      - name: Validate renovate presets
+        run: |
+          for file in renovate/presets/*.json; do
+            jq empty "$file" >/dev/null || {
+              printf 'invalid preset: %s\n' "$file"
+              exit 1
+            }
+          done
+
+  renovate-runner-checks:
+    needs: changes
+    if: ${{ needs.changes.outputs.renovate-runner == 'true' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+      - name: Install dependencies
+        run: npm --prefix renovate/runner ci
+      - name: Typecheck
+        run: npm --prefix renovate/runner run typecheck
+      - name: Run CI checks
+        run: npm --prefix renovate/runner run ci
 
   lint-yaml:
     needs: changes

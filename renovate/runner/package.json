@@ -1,0 +1,18 @@
+{
+    "name": "renovate-runner",
+    "private": true,
+    "type": "module",
+    "devDependencies": {
+        "@biomejs/biome": "2.4.16",
+        "@types/node": "^25.9.2",
+        "tsx": "^4.22.4",
+        "typescript": "^6.0.3"
+    },
+    "scripts": {
+        "choose-repos": "tsx src/choose-repos.ts",
+        "ci": "biome ci .",
+        "format": "biome format --write .",
+        "lint": "biome check --write .",
+        "typecheck": "tsc -p tsconfig.json"
+    }
+}
