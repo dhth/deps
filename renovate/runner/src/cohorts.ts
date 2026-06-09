@@ -6,9 +6,7 @@ export const CONFIG: Config = {
             {
                 name: "test",
                 days: [9],
-                repos: [
-                    "dhth/kplay",
-                ],
+                repos: ["dhth/kplay"],
             },
             {
                 name: "go-a",
@@ -87,9 +85,7 @@ export const CONFIG: Config = {
             {
                 name: "test",
                 days: [9],
-                repos: [
-                    "dhth/tbll",
-                ],
+                repos: ["dhth/tbll"],
             },
             {
                 name: "go",
