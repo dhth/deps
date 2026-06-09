@@ -1,4 +1,4 @@
-name: deps-gh-actions
+name: renovate-gh-actions
 
 on:
   workflow_dispatch:
