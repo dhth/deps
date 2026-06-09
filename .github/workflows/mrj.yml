@@ -66,9 +66,10 @@ jobs:
       - name: Commit and push results
         if: steps.check-publish.outputs.publish == '1'
         run: |
-          git config user.name "github-actions[bot]"
-          # https://github.com/actions/checkout?tab=readme-ov-file#push-a-commit-using-the-built-in-token
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # https://github.com/actions/create-github-app-token#configure-git-cli-for-an-apps-bot-user
+          # bot's user ID taken from https://api.github.com/users/mrj-ci%5Bbot%5D
+          git config user.name "mrj-ci[bot]"
+          git config user.email "212969977+mrj-ci[bot]@users.noreply.github.com"
           git add .
           git commit -m "add run-${{ steps.run-number.outputs.number }}"
           git push
