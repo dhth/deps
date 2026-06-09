@@ -1,7 +1,6 @@
 name: deps-gh-actions
 
 on:
-  pull_request:
   schedule:
     - cron: '0 2,4,6 25-27 * *'
   workflow_dispatch:

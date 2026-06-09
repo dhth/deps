@@ -10,6 +10,7 @@
     },
     "scripts": {
         "choose-repos": "tsx src/choose-repos.ts",
+        "ci": "biome ci .",
         "format": "biome format --write .",
         "lint": "biome check --write .",
         "typecheck": "tsc -p tsconfig.json"
