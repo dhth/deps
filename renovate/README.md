@@ -4,31 +4,42 @@ This directory holds the central Renovate policy and runner code for fleet-wide 
 
 ## Layout
 
-- `config/` - central Renovate config files used by CI
+- `config/` - runner/admin Renovate config used by CI
+- `presets/` - shared repo-level Renovate presets extended by managed repos
 - `runner/` - TypeScript workload-selection project used by GitHub Actions
 
-## Schedule
+## Orchestration
 
-- code dependency updates run biweekly by cohort
-- GitHub Actions updates run monthly
-- code updates and GitHub Actions updates use separate lanes
+1. GitHub Actions workflows run on a specific schedule
+2. The runner code decides which repositories are part of that run; Renovate runs for this selection
+3. Each target repo's Renovate config extends shared presets from this repo
+4. Renovate resolves the shared presets together with the target repo's local config and runs with that final result
 
-## Current workflow schedules
+The shared presets live centrally, but are consumed remotely by the repositories being maintained.
 
-- `deps-code.yml`
-  - runs at `02:00`, `04:00`, `06:00`, and `08:00` UTC
-  - runs on cohort days `1-9` and `15-23`
-- `deps-gh-actions.yml`
-  - runs at `02:00`, `04:00`, and `06:00` UTC
-  - runs monthly on days `25-27`
-- `mrj.yml`
-  - runs at `03:00`, `05:00`, `07:00`, and `09:00` UTC
-  - runs at `03:00`, `05:00`, and `07:00` UTC on the monthly GitHub Actions cohort days
+## Cohorts
 
-## Runtime model
+Repos are updated in cohorts instead of all at once.
 
-This setup is intentionally central-only for now.
+- each repo is assigned specific update days
+- Renovate only runs for the repos in the cohort for that day
+- this keeps dependency bumps isolated to predictable windows
+- it reduces churn from fast-moving dependencies that would otherwise keep opening fresh PRs
+- it avoids creating one fleet-wide spike of dependency work
 
-- target repositories are selected by CI
-- Renovate is invoked from GitHub Actions using `renovatebot/github-action`
-- the runner project computes selected repos and emits workflow outputs
+The main goal behind this is to batch dependency maintenance so that a repo is worked through on its assigned days instead of generating a steady stream of updates throughout the month.
+
+## Preset model
+
+Managed repos can extend multiple presets. A typical repo config looks like:
+
+```json
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "local>dhth/deps//renovate/presets/default",
+    "local>dhth/deps//renovate/presets/go",
+    "local>dhth/deps//renovate/presets/gh-actions"
+  ]
+}
+```
